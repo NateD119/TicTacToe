@@ -1,0 +1,34 @@
+
+h1{
+    text-align: center;
+}
+
+
+#topLeft, #topMiddle, #topRight, #middleLeft, #middleMiddle,#middleRight, #bottomLeft, #bottomMiddle, #bottomRight {
+    width: 80px;
+    height: 52px;
+    margin:auto;
+    border: 5px solid dodgerblue;
+    font-size: 30px;
+    text-align: center;
+    background-color: lavender;
+    border-radius: 10px;
+}
+main{
+    text-align: center;
+}
+#start, #play_again {
+    color: antiquewhite;
+    border: 10px solid rgb(35, 192, 223);
+    background-color: orangered;
+    border-radius: 8px;
+}
+p {
+    color: red;
+}
+.hidden{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}

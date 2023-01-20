@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <script src="scripts/main.js"></script>
+    <link rel="Stylesheet" href="styles/main.css">
+</head>
+<body>
+    <main>
+        <h1>Welcome to Tic-Tac-Toe</h1>
+        <p>How many players?</p>
+        <form>
+            <input type="radio" id="pvc" value="pvc" name="player_selection" onclick="computer(); playGame()">
+            <label for="pvc">One Player</label>
+            <input type="radio" id="pvp" value="pvp" name="player_selection" onclick="playGame()">
+            <label for ="pvp">Two Players</label><br>
+        </form>
+        <p>Select the Start button to begin!</p>
+        <button id="start" onclick="goesFirst(); playerToGo(); countUpCounter(); playGame()">Start/Restart</button>
+        <button id="play_again" onclick="resetGame()">Play Again?</button><br>
+        <p>Play again resets the board, then hit Start to get first player to play</p>
+        <span>Player to start the game: </span>
+        <span id="goesFirst"></span><br><br>
+        <div id="gameboard">
+            <input type="text" id="topLeft" onclick="clickTopLeft(); playerToGo();  playGame(); computer()" readonly>
+            <input type="text" id="topMiddle" onclick="clickTopMiddle(); playerToGo(); playGame(); computer()" readonly>
+            <input type="text" id="topRight" onclick="clickTopRight(); playGame(); computer()" readonly>
+            <br>
+            <input type="text" id="middleLeft" onclick="clickMiddleLeft(); playGame(); computer()" readonly>
+            <input type="text" id="middleMiddle" onclick="clickMiddleMiddle(); playGame(); computer()" readonly>
+            <input type="text" id="middleRight" onclick="clickMiddleRight(); playGame(); computer()" readonly>
+            <br>
+            <input type="text" id="bottomLeft" onclick="clickBottomLeft(); playGame(); computer()" readonly>
+            <input type="text" id="bottomMiddle" onclick="clickBottomMiddle(); playGame(); computer()" readonly>
+            <input type="text" id="bottomRight" onclick="clickBottomRight(); playGame(); computer()" readonly>
+        </div><br>
+        <span>Turn: </span>
+        <span id="playerTurn"></span><br><br>
+        <span>Current game timer: </span>
+        <span id="timeCount"></span><br><br>
+        <span>Winner: </span>
+        <span id="gameWinner"></span>
+    </main>    
+</body>
+</html>
